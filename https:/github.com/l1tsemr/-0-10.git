@@ -1,0 +1,22 @@
+ran = randint(0,10)
+print("Первая попытка - Введите число")
+pol = int(input())
+
+while pol != ran:
+    print("Вы не угадали. \nПопробуйте ещё раз!")
+    pol = int(input())
+print("Bingo")
+print()
+print("Хотите сыграть снова?")
+answer = input()
+while answer == "да":
+    ran = randint(0,10)
+    pol = int(input())
+    while pol != ran:
+        print("Вы не угадали. \nПопробуйте ещё раз!")
+        pol = int(input())
+    print("Bingo", end="\n")
+    print("Хотите сыграть снова?")
+    answer = input()
+if not answer == "да":
+    print("\nДо свидания")
